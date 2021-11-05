@@ -1,0 +1,11 @@
+.custom-header {
+  color: red;
+}
+
+:root {
+  --toastify-toast-width: 100%;
+
+  @media screen and (min-width: 600px) {
+    --toastify-toast-width: 50%;
+  }
+}

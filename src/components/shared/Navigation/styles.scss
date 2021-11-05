@@ -1,0 +1,19 @@
+@import 'style/colors';
+
+.sftl-nav-links {
+  a {
+    color: $secondary;
+    text-decoration: none;
+
+    &:hover,
+    &.active {
+      color: #fff;
+    }
+  }
+}
+
+.sftl-mobile-menu {
+  background-color: $primary !important;
+  border-top: 1px solid white;
+  color: white !important;
+}
