@@ -13,5 +13,5 @@ export const SigninOidc = () => {
     signinAsync();
   }, [history]);
 
-  return <div>Redirecting...</div>;
+  return <div>Check is authenticated...</div>;
 };

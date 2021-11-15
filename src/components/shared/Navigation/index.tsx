@@ -83,13 +83,13 @@ const Navigation = () => {
                     <ShoppingCartIcon /> Cart ({cartItemsLength})
                   </Stack>
                 </NavLink>
-                {user ? (
+                {!user ? (
                   <NavLink exact to="/login">
                     Login
                   </NavLink>
                 ) : (
                   <NavLink exact to="/signout-oidc">
-                    Login
+                    Logout
                   </NavLink>
                 )}
               </Stack>

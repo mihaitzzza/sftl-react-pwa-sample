@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import { signoutRedirectCallback } from "services/user";
+import { signoutRedirectCallback, signoutRedirect } from "services/user";
 
 export const SignoutOidc = () => {
   const history = useHistory();
   useEffect(() => {
     async function signoutAsync() {
-      await signoutRedirectCallback();
+      await signoutRedirect();
       history.push("/");
     }
     signoutAsync();

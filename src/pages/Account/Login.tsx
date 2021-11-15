@@ -11,8 +11,10 @@ export const Login = () => {
 
   useEffect(() => {
     //we can dispatch loadingUser such that we can show some spinner in some other places of the app
-    signinRedirect();
-  }, []);
+    if (!user) {
+      signinRedirect();
+    }
+  }, [user]);
 
   return user ? (
     <Redirect to={"/"} />

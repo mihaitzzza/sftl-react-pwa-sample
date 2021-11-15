@@ -18,7 +18,7 @@ export async function loadUserFromStorage(store: any) {
     if (!user) {
       return store.dispatch(resetState());
     }
-    store.dispatch(storeUser(user));
+    store.dispatch(storeUser(user?.profile));
   } catch (e) {
     console.error(`User not found: ${e}`);
     store.dispatch(resetState());

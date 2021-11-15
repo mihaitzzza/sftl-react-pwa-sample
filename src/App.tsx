@@ -42,8 +42,9 @@ function App() {
           <Navigation />
           <Box sx={{ p: 4 }}>
             <Switch>
-              <Route exact path="/" component={Homepage} />
-              <Route exact path="/products" component={Products} />
+              <PrivateRoute exact path="/" component={Homepage} />
+              {/* <Route exact path="/" component={Homepage} /> */}
+              <PrivateRoute exact path="/products" component={Products} />
               <Route exact path="/products/:id" component={Product} />
               {/*!!!!!!-------Check why not working-------------------------------!!!! */}
               {/* <PrivateRoute exact path="/products">
