@@ -23,3 +23,13 @@ yarn-debug.log*
 yarn-error.log*
 
 .idea/
+
+backend/SFTL.ReactTraining.API/bin/
+backend/SFTL.ReactTraining.API/obj/
+backend/SFTL.ReactTraining.IdentitySrv/bin/Debug/netcoreapp3.1/appsettings.json
+backend/SFTL.ReactTraining.IdentitySrv/bin/
+backend/SFTL.ReactTraining.IdentitySrv/obj/
+
+backend/SFTL.ReactTraining.DAL/bin/
+backend/SFTL.ReactTraining.DAL/obj/Debug/netcoreapp3.1/SFTL.ReactTraining.DAL.assets.cache
+backend/SFTL.ReactTraining.DAL/obj/
