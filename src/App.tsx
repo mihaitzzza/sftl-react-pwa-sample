@@ -45,7 +45,7 @@ function App() {
               <PrivateRoute exact path="/" component={Homepage} />
               {/* <Route exact path="/" component={Homepage} /> */}
               <PrivateRoute exact path="/products" component={Products} />
-              <Route exact path="/products/:id" component={Product} />
+              <PrivateRoute exact path="/products/:id" component={Product} />
               {/*!!!!!!-------Check why not working-------------------------------!!!! */}
               {/* <PrivateRoute exact path="/products">
                 <Products />

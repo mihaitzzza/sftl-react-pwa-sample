@@ -47,9 +47,9 @@ namespace SFTL.ReactTraining.IdentitySrv
                     AllowAccessTokensViaBrowser=true,
 
 
-                    RedirectUris = { "http://localhost:3000/signin-oidc" },
-                    AllowedCorsOrigins = { "http://localhost:3000" },
-                    PostLogoutRedirectUris = { "http://localhost:3000/signout-callback-oidc" },
+                    RedirectUris = { "http://localhost:3000/signin-oidc", "http://127.0.0.1:8080/signin-oidc" },
+                    AllowedCorsOrigins = { "http://localhost:3000","http://127.0.0.1:8080" },
+                    PostLogoutRedirectUris = { "http://localhost:3000/signout-callback-oidc", "http://127.0.0.1:8080/signout-callback-oidc" },
 
                     AllowedScopes = { "openid", "profile", "ReactTraining.Api", }
                 },
