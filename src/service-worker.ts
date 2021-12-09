@@ -12,7 +12,8 @@ import { clientsClaim } from 'workbox-core';
 import { ExpirationPlugin } from 'workbox-expiration';
 import { precacheAndRoute, createHandlerBoundToURL } from 'workbox-precaching';
 import { registerRoute } from 'workbox-routing';
-import { StaleWhileRevalidate } from 'workbox-strategies';
+import { StaleWhileRevalidate, NetworkFirst, NetworkOnly } from 'workbox-strategies';
+import { BackgroundSyncPlugin } from 'workbox-background-sync';
 
 declare const self: ServiceWorkerGlobalScope;
 
@@ -78,3 +79,24 @@ self.addEventListener('message', (event) => {
 });
 
 // Any other custom service worker logic can go here.
+registerRoute(
+    ({ request, url }) => url.origin === 'http://reacttrainingbackend.azurewebsites.net',
+    new NetworkFirst({
+        cacheName: 'sftl-api',
+        plugins: [
+            new ExpirationPlugin({
+                maxEntries: 50,
+            })
+        ]
+    }),
+    'GET',
+)
+
+const bgSyncPlugin = new BackgroundSyncPlugin('sftl-sync', {});
+registerRoute(
+    ({ url }) => url.origin === 'http://reacttrainingbackend.azurewebsites.net',
+    new NetworkOnly({
+        plugins: [bgSyncPlugin]
+    }),
+    'POST',
+)

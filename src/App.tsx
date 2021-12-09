@@ -13,6 +13,7 @@ import Product from "pages/Product";
 import { Login } from "pages/Account/Login";
 import { SigninOidc } from "pages/Account/SignIn";
 import { SignoutOidc } from "pages/Account/SingOut";
+import AddProduct from 'pages/AddProduct';
 
 import "react-toastify/dist/ReactToastify.css";
 import "./App.scss";
@@ -46,6 +47,7 @@ function App() {
               {/* <Route exact path="/" component={Homepage} /> */}
               <PrivateRoute exact path="/products" component={Products} />
               <PrivateRoute exact path="/products/:id" component={Product} />
+              <PrivateRoute exact path="/add-product" component={AddProduct} />
               {/*!!!!!!-------Check why not working-------------------------------!!!! */}
               {/* <PrivateRoute exact path="/products">
                 <Products />

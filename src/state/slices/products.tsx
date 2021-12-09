@@ -49,7 +49,7 @@ export const productsSlice = createSlice({
   initialState,
   reducers: {
     load: (state, action) => {
-      return [...state, ...action.payload];
+      return action.payload;
     },
   },
 });
